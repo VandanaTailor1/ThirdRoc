@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".SignPage">
+           <ImageView
+               android:layout_width="88dp"
+               android:layout_height="88dp"
+               android:src="@drawable/new_logo_client"
+               android:layout_gravity="center"
+               android:layout_marginTop="70dp"
+
+               />
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="400dp"
+               app:cardCornerRadius="30dp"
+               android:layout_marginTop="50dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp"
+               app:cardElevation="5dp"
+               android:id="@+id/card"
+               >
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="400dp"
+                   android:background="@drawable/shap"
+                   >
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Sign In"
+              android:layout_marginTop="20dp"
+              android:textStyle="bold"
+              android:textSize="25sp"
+              android:gravity="center"
+              android:id="@+id/signid"
+              />
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:background="@drawable/broder_shap"
+                   android:layout_below="@+id/signid"
+                   android:layout_marginTop="60dp"
+                   app:cardCornerRadius="10dp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginRight="10dp"
+                   android:id="@+id/relate"
+                   >
+               <ImageView
+                   android:layout_width="21dp"
+                   android:layout_height="21dp"
+                   android:src="@drawable/phone"
+                 android:layout_margin="10dp"
+                   android:layout_centerVertical="true"
+                   android:id="@+id/idphn"
+                   />
+               <View
+                   android:layout_width="1dp"
+                   android:layout_height="match_parent"
+                   android:layout_toRightOf="@+id/idphn"
+                    android:background="@color/bordercolor"
+                   android:id="@+id/view"
+                   android:layout_marginTop="7dp"
+                   android:layout_marginBottom="7dp"
+                   android:layout_marginRight="10dp"
+                   />
+
+                   <EditText
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="15dp"
+                       android:layout_marginEnd="10dp"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="30dp"
+                       android:layout_toRightOf="@+id/view"
+                       android:inputType="numberSigned"
+                       android:text="45645536435"
+                        android:background="@null"
+                       />
+               </RelativeLayout>
+             <androidx.appcompat.widget.AppCompatButton
+                 android:layout_width="match_parent"
+                 android:layout_height="45dp"
+                 android:layout_below="@+id/relate"
+                 android:layout_marginTop="80dp"
+                 android:layout_marginRight="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:gravity="center"
+                 android:text="Genrated OTP"
+                 android:background="@drawable/generateshape"
+                 android:textColor="@color/white"
+                 android:textSize="15sp"
+                 android:id="@+id/gntotp"
+                 />
+       </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+
+</LinearLayout>
