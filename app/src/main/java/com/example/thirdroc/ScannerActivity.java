@@ -9,10 +9,12 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseArray;
+import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,15 +30,15 @@ import com.google.zxing.Result;
 import java.io.IOException;
 
 public class ScannerActivity extends AppCompatActivity {
-
   CodeScannerView codeScannerView;
   CodeScanner codescan;
-
+   View leftimg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scanner);
+       setContentView(R.layout.activity_scanner);
        codeScannerView=findViewById(R.id.suface);
+       leftimg=findViewById(R.id.leftarrow);
        codescan =new CodeScanner(this,codeScannerView);
        codescan.setDecodeCallback(new DecodeCallback() {
            @Override
@@ -45,6 +47,8 @@ public class ScannerActivity extends AppCompatActivity {
                    @Override
                    public void run() {
                        Toast.makeText(ScannerActivity.this,result.getText(),Toast.LENGTH_SHORT).show();
+                       Intent intent=new Intent(ScannerActivity.this, AmmountPay.class);
+                       startActivity(intent);
                    }
                });
            }
@@ -55,6 +59,10 @@ public class ScannerActivity extends AppCompatActivity {
                  codescan.startPreview();
              }
          });
+
+        leftimg.setOnClickListener(v -> {
+            finish();
+        });
     }
 
     @Override
@@ -68,4 +76,5 @@ public class ScannerActivity extends AppCompatActivity {
       codescan.releaseResources();
         super.onPause();
     }
+
   }

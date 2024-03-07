@@ -44,7 +44,6 @@ public class HomeRecycle extends RecyclerView.Adapter<HomeRecycle.ManagerViewHol
         public ManagerViewHolder(@NonNull View itemView) {
             super(itemView);
           amzntxt=itemView.findViewById(R.id.amzntxt);
-
         }
     }
 

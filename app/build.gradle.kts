@@ -26,10 +26,22 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+
+  /*  viewBinding{
+        enable = true
+    }
+
+    dataBinding{
+        enable = true
+    }*/
 }
 
 dependencies {
-
     //noinspection GradleCompatible
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
@@ -41,4 +53,8 @@ dependencies {
     implementation ("androidmads.library.qrgenearator:QRGenearator:1.0.3")
     implementation ("com.google.android.gms:play-services-vision:11.8.0")
     implementation ("com.github.yuriy-budiyev:code-scanner:2.3.2")
+    implementation ("com.hbb20:ccp:2.6.0")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
 }

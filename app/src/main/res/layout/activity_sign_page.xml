@@ -13,7 +13,6 @@
                android:src="@drawable/new_logo_client"
                android:layout_gravity="center"
                android:layout_marginTop="70dp"
-
                />
 
            <androidx.cardview.widget.CardView
@@ -68,9 +67,15 @@
                    android:id="@+id/view"
                    android:layout_marginTop="7dp"
                    android:layout_marginBottom="7dp"
-                   android:layout_marginRight="10dp"
-                   />
 
+                   />
+                   <com.hbb20.CountryCodePicker
+                       android:layout_width="50dp"
+                       android:layout_height="wrap_content"
+                       android:layout_toRightOf="@+id/view"
+                       android:layout_marginTop="9dp"
+                       android:id="@+id/countrypic"
+                       />
                    <EditText
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
@@ -78,10 +83,11 @@
                        android:layout_marginEnd="10dp"
                        android:layout_marginBottom="10dp"
                        android:layout_marginLeft="30dp"
-                       android:layout_toRightOf="@+id/view"
+                       android:layout_toRightOf="@+id/countrypic"
                        android:inputType="numberSigned"
-                       android:text="45645536435"
+                       android:hint="7879876654"
                         android:background="@null"
+                       android:id="@+id/edtnum"
                        />
                </RelativeLayout>
              <androidx.appcompat.widget.AppCompatButton
@@ -93,7 +99,7 @@
                  android:layout_marginLeft="10dp"
                  android:gravity="center"
                  android:text="Genrated OTP"
-                 android:background="@drawable/generateshape"
+                 android:background="@drawable/customcolor"
                  android:textColor="@color/white"
                  android:textSize="15sp"
                  android:id="@+id/gntotp"

@@ -27,7 +27,6 @@ public class HomeFragment extends Fragment {
         View v= inflater.inflate(R.layout.fragment_home, container, false);
         payimg=v.findViewById(R.id.pay);
 
-
         payimg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -13,7 +13,6 @@ public class OtpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
-
         button=findViewById(R.id.verify);
 
         button.setOnClickListener(new View.OnClickListener() {
